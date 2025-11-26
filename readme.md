@@ -4,12 +4,16 @@ This project demonstrates an end-to-end **traffic forecasting system** using:
 - **ARIMA** – classical statistical model  
 - **TFT (Temporal Fusion Transformer)** – state-of-the-art deep learning model  
 
+[Click here to see the dashboard](https://traffic-volume-analysis-tft.streamlit.app/)
+
 It includes:
 - Full preprocessing pipeline  
 - Baseline model (ARIMA)  
 - Advanced deep learning model (TFT)  
 - Performance comparison  
 - Streamlit web dashboard  
+
+
 
 
 
