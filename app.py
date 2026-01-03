@@ -205,6 +205,8 @@ with tab2:
     })
     df_arima["Traffic Volume"] = pd.to_numeric(df_arima["Traffic Volume"], errors="coerce")
     df_arima = df_arima.dropna()
+    df_arima["Traffic Volume"] = df_arima["Traffic Volume"].astype(float)
+
 
 
     fig = px.line(
@@ -233,6 +235,8 @@ with tab3:
 
     df_tft["Traffic Volume"] = pd.to_numeric(df_tft["Traffic Volume"], errors="coerce")
     df_tft = df_tft.dropna()
+    df_tft["Traffic Volume"] = df_tft["Traffic Volume"].astype(float)
+
 
 
     fig = px.line(
