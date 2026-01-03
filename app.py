@@ -48,19 +48,12 @@ for **multi-step traffic forecasting** on the Metro Interstate dataset.
 def load_arima():
     return pickle.load(open("models/arima.pkl", "rb"))
 
-@st.cache_resource
 def load_tft():
-    tft = TemporalFusionTransformer.load_from_checkpoint(
-        "models/tft.ckpt", 
+    return TemporalFusionTransformer.load_from_checkpoint(
+        "models/tft.ckpt",
         map_location="cpu"
     )
 
-    # Load dataset parameters
-    with open("models/tft_dataset_params.pkl", "rb") as f:
-        params = pickle.load(f)
-
-    tft.dataset_parameters = params
-    return tft
 
 @st.cache_resource
 def load_test_df():
