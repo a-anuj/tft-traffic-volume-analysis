@@ -203,6 +203,9 @@ with tab2:
         "Hour": np.arange(1, forecast_hours + 1),
         "Traffic Volume": arima_pred
     })
+    df_arima["Traffic Volume"] = pd.to_numeric(df_arima["Traffic Volume"], errors="coerce")
+    df_arima = df_arima.dropna()
+
 
     fig = px.line(
         df_arima,
@@ -227,6 +230,10 @@ with tab3:
         "Hour": np.arange(1, forecast_hours + 1),
         "Traffic Volume": tft_pred
     })
+
+    df_tft["Traffic Volume"] = pd.to_numeric(df_tft["Traffic Volume"], errors="coerce")
+    df_tft = df_tft.dropna()
+
 
     fig = px.line(
         df_tft,
